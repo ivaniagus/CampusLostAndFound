@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.campust_lf.FormHilangController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="📋 Form Lapor Barang Hilang" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+        
+        <GridPane hgap="10.0" vgap="12.0" alignment="CENTER">
+            <columnConstraints>
+                <javafx.scene.layout.ColumnConstraints halignment="RIGHT" minWidth="130.0" prefWidth="130.0" />
+                <javafx.scene.layout.ColumnConstraints hgrow="ALWAYS" minWidth="300.0" prefWidth="300.0" />
+            </columnConstraints>
+            
+            <children>
+                <Label text="ID Laporan:" GridPane.rowIndex="0" style="-fx-font-weight: bold;" />
+                <TextField fx:id="tfId" GridPane.columnIndex="1" GridPane.rowIndex="0" promptText="Contoh: LH-001" />
+                
+                <Label text="Nama Barang:" GridPane.rowIndex="1" style="-fx-font-weight: bold;" />
+                <TextField fx:id="tfNama" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="Nama barang yang hilang" />
+                
+                <Label text="Kategori:" GridPane.rowIndex="2" style="-fx-font-weight: bold;" />
+                <ComboBox fx:id="cbKategori" GridPane.columnIndex="1" GridPane.rowIndex="2" promptText="Pilih kategori">
+                    <items>
+                        <javafx.collections.FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Elektronik" />
+                            <String fx:value="Tas & Dompet" />
+                            <String fx:value="Kunci" />
+                            <String fx:value="Dokumen" />
+                            <String fx:value="Aksesoris" />
+                            <String fx:value="Lainnya" />
+                        </javafx.collections.FXCollections>
+                    </items>
+                </ComboBox>
+                
+                <Label text="Ciri-ciri Khusus:" GridPane.rowIndex="3" style="-fx-font-weight: bold;" />
+                <TextField fx:id="tfCiri" GridPane.columnIndex="1" GridPane.rowIndex="3" promptText="Warna, merk, cacatan, dll" />
+                
+                <Label text="Lokasi Hilang:" GridPane.rowIndex="4" style="-fx-font-weight: bold;" />
+                <TextField fx:id="tfLokasi" GridPane.columnIndex="1" GridPane.rowIndex="4" promptText="Gedung, ruangan, area parkir, dll" />
+                
+                <Label text="Waktu Hilang:" GridPane.rowIndex="5" style="-fx-font-weight: bold;" />
+                <TextField fx:id="tfWaktu" GridPane.columnIndex="1" GridPane.rowIndex="5" promptText="Contoh: 2024-01-15 14:30" />
+                
+                <Label text="Nama Pelapor:" GridPane.rowIndex="6" style="-fx-font-weight: bold;" />
+                <TextField fx:id="tfNamaPelapor" GridPane.columnIndex="1" GridPane.rowIndex="6" promptText="Nama lengkap Anda" />
+                
+                <Label text="No HP:" GridPane.rowIndex="7" style="-fx-font-weight: bold;" />
+                <TextField fx:id="tfNoTelepon" GridPane.columnIndex="1" GridPane.rowIndex="7" promptText="08xxxxxxxxxx" />
+                
+                <Label text="Email:" GridPane.rowIndex="8" style="-fx-font-weight: bold;" />
+                <TextField fx:id="tfEmail" GridPane.columnIndex="1" GridPane.rowIndex="8" promptText="email@domain.com" />
+            </children>
+        </GridPane>
+        
+        <HBox spacing="15.0" alignment="CENTER">
+            <children>
+                <Button fx:id="btnSimpan" text="💾 Simpan Laporan" prefWidth="150.0" prefHeight="40.0" onAction="#handleSimpan" style="-fx-font-size: 13px; -fx-background-color: #27ae60; -fx-text-fill: white;" />
+                <Button fx:id="btnBersihkan" text="🧹 Bersihkan" prefWidth="120.0" prefHeight="40.0" onAction="#handleBersihkan" style="-fx-font-size: 13px; -fx-background-color: #f39c12; -fx-text-fill: white;" />
+                <Button fx:id="btnKembali" text="⬅ Kembali" prefWidth="120.0" prefHeight="40.0" onAction="#handleKembali" style="-fx-font-size: 13px; -fx-background-color: #95a5a6; -fx-text-fill: white;" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

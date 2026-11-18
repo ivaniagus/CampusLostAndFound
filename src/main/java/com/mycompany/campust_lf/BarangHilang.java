@@ -32,5 +32,14 @@ public class BarangHilang extends Barang {
         System.out.println("Email      : " + email);
         System.out.println("-------------------------");
     }
+    @Override
+    public String getDetailInfo() {
+        return super.getDetailInfo()
+             + "--- INFO PELAPOR ---\n"
+             + "Pelapor    : " + namaPelapor + "\n"
+             + "Kontak     : " + noTelepon + "\n"
+             + "Email      : " + email + "\n"
+             + "-------------------------\n";
+    }
 }
 

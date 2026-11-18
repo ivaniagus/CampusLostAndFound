@@ -38,6 +38,15 @@ public class BarangDitemukan extends Barang {
         System.out.println("Nama       : " + namaPenemu);
         System.out.println("Opsi Titip : " + (opsiTitip.equals("POS") ? "Pos Penyimpanan Resmi" : "Dibawa Sendiri"));
     }
+    @Override
+    public String getDetailInfo() {
+        String keteranganTitip = "POS".equals(opsiTitip) ? "Pos Penyimpanan Resmi" : "Dibawa Sendiri";
+        return super.getDetailInfo()
+             + "--- INFO PENEMU ---\n"
+             + "Nama       : " + namaPenemu + "\n"
+             + "Opsi Titip : " + keteranganTitip + "\n"
+             + "-------------------------\n";
+    }
     
 }
     

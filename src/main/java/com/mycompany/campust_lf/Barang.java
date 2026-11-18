@@ -81,4 +81,14 @@ public class Barang {
         System.out.println("Waktu      : " + waktu);
         System.out.println("Status     : " + status);
     }
+    public String getDetailInfo() {
+        return "--- DETAIL BARANG ---\n"
+             + "ID         : " + idBarang + "\n"
+             + "Nama       : " + namaBarang + "\n"
+             + "Kategori   : " + kategori + "\n"
+             + "Ciri-ciri  : " + ciriKhusus + "\n"
+             + "Lokasi     : " + lokasi + "\n"
+             + "Waktu      : " + waktu + "\n"
+             + "Status     : " + status + "\n";
+    }
 }

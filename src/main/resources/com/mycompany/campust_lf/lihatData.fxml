@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.campust_lf.LihatDataController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="👁 Daftar Semua Barang" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+        
+        <Label fx:id="lblJumlahData" text="Total data: 0" style="-fx-font-size: 13px; -fx-text-fill: #7f8c8d;" />
+        
+        <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+            <content>
+                <TableView fx:id="tableBarang" columnResizePolicy="CONSTRAINED_RESIZE_POLICY">
+                    <columns>
+                        <TableColumn fx:id="colId" text="ID" prefWidth="80">
+                            <cellValueFactory><PropertyValueFactory property="idBarang" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="colNama" text="Nama Barang" prefWidth="150">
+                            <cellValueFactory><PropertyValueFactory property="namaBarang" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="colKategori" text="Kategori" prefWidth="120">
+                            <cellValueFactory><PropertyValueFactory property="kategori" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="colLokasi" text="Lokasi" prefWidth="150">
+                            <cellValueFactory><PropertyValueFactory property="lokasi" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="colWaktu" text="Waktu" prefWidth="150">
+                            <cellValueFactory><PropertyValueFactory property="waktu" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="colStatus" text="Status" prefWidth="180">
+                            <cellValueFactory><PropertyValueFactory property="status" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="colDetail" text="Detail" prefWidth="150">
+                            <cellValueFactory><PropertyValueFactory property="detailTambahan" /></cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </content>
+        </ScrollPane>
+        
+        <Button fx:id="btnTutup" text="✕ Tutup" prefWidth="120.0" prefHeight="35.0" onAction="#handleTutup" style="-fx-font-size: 13px; -fx-background-color: #95a5a6; -fx-text-fill: white;" />
+    </children>
+</VBox>

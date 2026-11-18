@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.campust_lf.PrimaryController">
-   <children>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.campust_lf.PrimaryController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="🐾 SmartLiving: CampusLost & Found" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+        
+        <!-- Main Menu Buttons -->
+        <VBox spacing="10.0" alignment="CENTER" prefWidth="400.0">
+            <children>
+                <Button fx:id="btnLaporHilang" text="📋 Lapor Barang Hilang" prefWidth="300.0" prefHeight="45.0" onAction="#handleLaporHilang" style="-fx-font-size: 14px; -fx-background-color: #e74c3c; -fx-text-fill: white;" />
+                <Button fx:id="btnLaporDitemukan" text="📦 Lapor Barang Ditemukan" prefWidth="300.0" prefHeight="45.0" onAction="#handleLaporDitemukan" style="-fx-font-size: 14px; -fx-background-color: #27ae60; -fx-text-fill: white;" />
+                <Button fx:id="btnLihatData" text="👁 Lihat Semua Data" prefWidth="300.0" prefHeight="45.0" onAction="#handleLihatData" style="-fx-font-size: 14px; -fx-background-color: #3498db; -fx-text-fill: white;" />
+                <Button fx:id="btnKeluar" text="❌ Keluar" prefWidth="300.0" prefHeight="45.0" onAction="#handleKeluar" style="-fx-font-size: 14px; -fx-background-color: #95a5a6; -fx-text-fill: white;" />
+            </children>
+        </VBox>
+    </children>
 </VBox>
